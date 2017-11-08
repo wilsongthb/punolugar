@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2017 a las 20:56:35
+-- Tiempo de generación: 09-11-2017 a las 03:03:34
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -44,14 +44,14 @@ CREATE TABLE `markers` (
 INSERT INTO `markers` (`id`, `name`, `direccion`, `lat`, `lng`, `tipo`) VALUES
 (1, 'PLAZA DE ARMAS', 'Ubicado en el centro de ciudad \r\nde Puno en el Jiron Destua', -15.840590, -70.028008, 'plaza'),
 (2, 'MIRADOR PUMA UTA', 'El mirador de Puma uta, se encuentra a 3 Km. al noroeste de Puno', -15.819839, -70.028931, 'mirador'),
-(3, 'MIRADOR KUNTOR WASI', 'Mas conocido como mirador el condor ubicado a 2 Km. del centro de Puno ', -15.843679, -70.035957, 'mirador'),
+(3, 'MIRADOR KUNTOR WASI', 'Mas conocido como mirador el condor ubicado a 2 Km. del centro de Puno ', -15.847340, -70.030128, 'mirador'),
 (4, 'CERRO DE AZOGUINI', 'Mas conocido como camino a Azoguini donde se encuentra el calvario de Puno', -15.832410, -70.034889, 'atractivo'),
 (5, 'MUELLE LACUSTRE', 'Ubicado en la bahia de Puno', -15.836210, -70.014626, 'atractivo'),
 (6, 'MALECON ECO TURISTICO', 'Ubicado a 3.815 metros de altura este dique artificial en la bahia de Puno', -15.832197, -70.016464, 'atractivo'),
 (7, 'PLAZA DE FARO', 'Ubicado en la bahia de Puno e inicio del Malecon Eco Turistico de Puno', -15.835576, -70.015274, 'plaza'),
 (8, 'ISLA ESTEVES', 'Ubicado a 2 km de Puno', -15.827358, -69.992470, 'isla'),
 (9, 'ISLA FLOTANTE DE LOS UROS', 'Ubicado al oeste del lago Titicaca, y al noreste de Puno, a 7 km de la ciudad de Puno', -15.827358, -69.974350, 'isla'),
-(10, 'LAGO TITICACA', 'Ubicado en el Altiplano andino en los Andes Centrales, dentro de la meseta del Collao una altitud promedio de 3812 msnm  de Bolivia y Perú', -15.837081, -70.008064, 'atractivo');
+(10, 'LAGO TITICACA', 'Ubicado en el Altiplano andino en los Andes Centrales, dentro de la meseta del Collao una altitud promedio de 3812 msnm  de Bolivia y Peru', -15.837081, -70.008064, 'atractivo');
 
 --
 -- Índices para tablas volcadas

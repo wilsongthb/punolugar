@@ -5,12 +5,13 @@
     <title>Using MySQL and PHP with Google Maps</title>
       <link href="../css/styles.css" rel="stylesheet">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+      
+
       #map {
         height: 75%;
       }
-      /* Optional: Makes the sample page fill the window. */
+      
+
       html, body {
         height: 100%;
         margin: 0;
@@ -20,7 +21,7 @@
      <?php 
          
       echo "<div class='titular'  >PUNO CIUDAD TURISTICA</div>
-      <button type='submit' id='enviar' class='btn btn-alert'>Presionar el marcador del mapa para visualizar descripcion</button><br>
+      <button type='submit' id='enviar' class='btn btn-alert'>Presionar el marcador del mapa para visualizar descripcion de la Base De Datos</button><br>
      
       ";
      
@@ -54,7 +55,7 @@
         });
         var infoWindow = new google.maps.InfoWindow;
 
-          // Change this depending on the name of your PHP or XML file
+         
           downloadUrl('formato.php', function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
