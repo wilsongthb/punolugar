@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2017 a las 03:03:34
+-- Tiempo de generación: 05-12-2017 a las 02:45:00
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -42,10 +42,10 @@ CREATE TABLE `markers` (
 --
 
 INSERT INTO `markers` (`id`, `name`, `direccion`, `lat`, `lng`, `tipo`) VALUES
-(1, 'PLAZA DE ARMAS', 'Ubicado en el centro de ciudad \r\nde Puno en el Jiron Destua', -15.840590, -70.028008, 'plaza'),
-(2, 'MIRADOR PUMA UTA', 'El mirador de Puma uta, se encuentra a 3 Km. al noroeste de Puno', -15.819839, -70.028931, 'mirador'),
-(3, 'MIRADOR KUNTOR WASI', 'Mas conocido como mirador el condor ubicado a 2 Km. del centro de Puno ', -15.847340, -70.030128, 'mirador'),
-(4, 'CERRO DE AZOGUINI', 'Mas conocido como camino a Azoguini donde se encuentra el calvario de Puno', -15.832410, -70.034889, 'atractivo'),
+(1, 'PLAZA DE ARMAS', 'Ubicado en el centro de ciudad \r\nde Puno\r\n-Jiron Destua', -15.840590, -70.028008, 'plaza'),
+(2, 'MIRADOR PUMA UTA', 'El mirador de Puma uta, \r\nse encuentra a 3 Km. \r\nal noroeste de Puno', -15.819839, -70.028931, 'mirador'),
+(3, 'MIRADOR KUNTOR WASI', 'Mas conocido como mirador el condor ubicado a 2 Km.\r\ndel centro de Puno ', -15.847340, -70.030128, 'mirador'),
+(4, 'CERRO DE AZOGUINI', 'Mas conocido como camino a Azoguini \r\ndonde se encuentra el \r\ncalvario de Puno', -15.832410, -70.034889, 'atractivo'),
 (5, 'MUELLE LACUSTRE', 'Ubicado en la bahia de Puno', -15.836210, -70.014626, 'atractivo'),
 (6, 'MALECON ECO TURISTICO', 'Ubicado a 3.815 metros de altura este dique artificial en la bahia de Puno', -15.832197, -70.016464, 'atractivo'),
 (7, 'PLAZA DE FARO', 'Ubicado en la bahia de Puno e inicio del Malecon Eco Turistico de Puno', -15.835576, -70.015274, 'plaza'),

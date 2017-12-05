@@ -10,7 +10,19 @@
       #map {
         height: 75%;
       }
-      
+       #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+      }
 
       html, body {
         height: 100%;
@@ -31,6 +43,8 @@
   <body>
     
     <div id="map"></div>
+    <div id="legend"><h3>Legend</h3></div>
+
 
     <script>
       var customLabel = {
@@ -53,6 +67,84 @@
           center: new google.maps.LatLng(-15.836085, -70.023738), 
           zoom: 14
         });
+
+         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          parque: {
+            name: 'Parque',
+            icon: iconBase + 'parking_lot_maps.png'
+          },
+          museo: {
+            name: 'Museo',
+            icon: iconBase + 'library_maps.png'
+          },
+          info: {
+            name: 'Ayuda',
+            icon: iconBase + 'info-i_maps.png'
+          }
+        };
+
+        var features = [
+          {
+            position: new google.maps.LatLng(-15.840088,  -70.027713),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-15.840464,-70.028614),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-15.83566,  -70.023491),
+            type: 'info'
+          }, {
+            position: new google.maps.LatLng(-15.835253, -70.014900),
+            type: 'info'
+          },  {
+            position: new google.maps.LatLng(-15.83785, -70.027875),
+            type: 'parque'
+          }, {
+            position: new google.maps.LatLng(-15.838622,  -70.024214),
+            type: 'parque'
+          }, {
+            position: new google.maps.LatLng(-15.824470,  -70.017376),
+            type: 'parque'
+          }, {
+            position: new google.maps.LatLng(-15.839072,  -70.023108),
+            type: 'parque'
+          }, {
+            position: new google.maps.LatLng(-15.840521,  -70.029017),
+            type: 'museo'
+          }, {
+            position: new google.maps.LatLng(-15.838295, -70.022346),
+            type: 'museo'
+          }, {
+            position: new google.maps.LatLng(-15.835757,  -70.015355),
+            type: 'museo'
+          }, {
+            position: new google.maps.LatLng(-15.841866, -70.029234),
+            type: 'museo'
+          }
+        ];
+
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+        });
+
+        var legend = document.getElementById('legend');
+        for (var key in icons) {
+          var type = icons[key];
+          var name = type.name;
+          var icon = type.icon;
+          var div = document.createElement('div');
+          div.innerHTML = '<img src="' + icon + '"> ' + name;
+          legend.appendChild(div);
+        }
+
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
         var infoWindow = new google.maps.InfoWindow;
 
          
@@ -109,6 +201,7 @@
       }
 
       function doNothing() {}
+     
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5LyJgUAvKrx7EUMCC3nQ_YDEJ10Maq8s&callback=initMap">

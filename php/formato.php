@@ -35,6 +35,7 @@ while ($row_markers = mysqli_fetch_assoc($resultado_markers)){
   echo 'lat="' . $row_markers['lat'] . '" ';
   echo 'lng="' . $row_markers['lng'] . '" ';
   echo 'tipo="' . $row_markers['tipo'] . '" ';
+    
   echo '/>';
 }
 
